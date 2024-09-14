@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .menu-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            overflow: hidden;
+            text-align: center;
+            width: 200px;
+        }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+        .menu-item h3 {
+            margin: 10px 0;
+        }
+        .price {
+            font-size: 1.2em;
+            color: #ff5722;
+        }
+        .order-button {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .order-button:hover {
+            background-color: #218838;
+        }
+        .cart {
+            margin: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 600px) {
+            .menu-item {
+                width: 90%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Delicious Food Delivery</h1>
+    <p>Order your favorite meals online!</p>
+</header>
+
+
+    <div class="menu-item">
+        <img src="Burger.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p class="price">$7.99</p>
+        <button class="order-button" onclick="addToCart('Burger', 7.99)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="Pasta1.jpg" alt="Pasta">
+        <h3>Pasta</h3>
+        <p class="price">$8.99</p>
+        <button class="order-button" onclick="addToCart('Pasta', 8.99)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="Salad.jpg" alt="Salad">
+        <h3>Salad</h3>
+        <p class="price">$5.99</p>
+        <button class="order-button" onclick="addToCart('Salad', 5.99)">Order Now</button>
+    </div>
+</div>
+
+    <div class="menu-item">
+        <img src="bread.JPG" alt="bread">
+        <h3>Bread</h3>
+        <p class="price">$0.10</p>
+        <button class="order-button" onclick="addToCart('Bread', 0.10)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="donat.jpg" alt="Pasta">
+        <h3>Donat</h3>
+        <p class="price">$5.99</p>
+        <button class="order-button" onclick="addToCart('donat', 5.99)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="cake.jpg" alt="Salad">
+        <h3>Cake</h3>
+        <p class="price">$9.99</p>
+        <button class="order-button" onclick="addToCart('Salad', 9.99)">Order Now</button>
+    </div>
+</div>
+
+    <div class="menu-item">
+        <img src="fanta.png" alt="Fanta">
+        <h3>Fanta</h3>
+        <p class="price">$2</p>
+        <button class="order-button" onclick="addToCart('Fanta', 2)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="pepci.png" alt="pepci">
+        <h3>Pepci</h3>
+        <p class="price">$1</p>
+        <button class="order-button" onclick="addToCart('Pepci', 1)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="Sprite.jpg" alt="Sprite">
+        <h3>Sprite</h3>
+        <p class="price">$1</p>
+        <button class="order-button" onclick="addToCart('Sprite', 1)">Order Now</button>
+    </div>
+</div>
+
+    <div class="menu-item">
+        <img src="Passion cream.jpg" alt="Passion cream">
+        <h3>Passion cream</h3>
+        <p class="price">$4</p>
+        <button class="order-button" onclick="addToCart('Passion cream', 4)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="Milk green tea.jpg" alt="Milk green tea">
+        <h3>Milk green tea</h3>
+        <p class="price">$4</p>
+        <button class="order-button" onclick="addToCart('Milk green tea', 4)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="Coffee.jpg" alt="Coffee">
+        <h3>Coffee</h3>
+        <p class="price">$5.50</p>
+        <button class="order-button" onclick="addToCart('SCoffee', 5.50)">Order Now</button>
+    </div>
+</div>
+
+    <div class="menu-item">
+        <img src="Chicken rice.jpg" alt="Chicken rice">
+        <h3>Chicken rice</h3>
+        <p class="price">$8.99</p>
+        <button class="order-button" onclick="addToCart('Chicken rice', 8.99)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="Fried chicken wings.jpg" alt="Fried chicken wings">
+        <h3>Fried chicken wings</h3>
+        <p class="price">$9.99</p>
+        <button class="order-button" onclick="addToCart('Fried chicken wings', 9.99)">Order Now</button>
+    </div>
+    <div class="menu-item">
+        <img src="Stek.jpg" alt="Stek">
+        <h3>Stek</h3>
+        <p class="price">$15.99</p>
+        <button class="order-button" onclick="addToCart('Stek', 15.99)">Order Now</button>
+    </div>
+</div>
+
+<div class="cart">
+    <h2>Your Order</h2>
+    <ul id="cart-list"></ul>
+    <p id="total-price">Total: $0.00</p>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Button Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .buy-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buy-button:hover {
+            background-color: #218838;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>ចុចដើម្បីទិញ</h1>
+<a href="https://www.facebook.com/profile.php?id=100025122060005"><button class="buy-button" id="buyBtn">Buy Now</button></a>
+<div id="message"></div>
+
+<script>
+    document.getElementById('buyBtn').addEventListener('click', () => {
+        document.getElementById('message').innerHTML = "Thank you for your purchase!";
+    });
+</script>
+
+</body>
+</html>
+   
+   
+</div>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(item, price) {
+        cart.push({ item, price });
+        total += price;
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartList = document.getElementById('cart-list');
+        cartList.innerHTML = '';
+        
+        cart.forEach((cartItem, index) => {
+            const li = document.createElement('li');
+            li.textContent = `${cartItem.item} - $${cartItem.price.toFixed(2)}`;
+            cartList.appendChild(li);
+        });
+
+        document.getElementById('total-price').textContent = `Total: $${total.toFixed(2)}`;
+        
+    }
+</script>
+
+</body>
+</html>
